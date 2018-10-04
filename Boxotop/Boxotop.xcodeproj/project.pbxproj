@@ -12,6 +12,8 @@
 		F429E22A216615C50003A1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F429E228216615C50003A1C3 /* LaunchScreen.storyboard */; };
 		F429E23A216619C80003A1C3 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E238216619C80003A1C3 /* MoviesViewController.swift */; };
 		F429E23B216619C80003A1C3 /* MoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F429E239216619C80003A1C3 /* MoviesViewController.xib */; };
+		F429E23E21661CC50003A1C3 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E23C21661CC50003A1C3 /* MovieViewController.swift */; };
+		F429E23F21661CC50003A1C3 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F429E23D21661CC50003A1C3 /* MovieViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F429E22B216615C50003A1C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F429E238216619C80003A1C3 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		F429E239216619C80003A1C3 /* MoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesViewController.xib; sourceTree = "<group>"; };
+		F429E23C21661CC50003A1C3 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		F429E23D21661CC50003A1C3 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				F429E238216619C80003A1C3 /* MoviesViewController.swift */,
 				F429E239216619C80003A1C3 /* MoviesViewController.xib */,
+				F429E23C21661CC50003A1C3 /* MovieViewController.swift */,
+				F429E23D21661CC50003A1C3 /* MovieViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 				F429E22A216615C50003A1C3 /* LaunchScreen.storyboard in Resources */,
 				F429E23B216619C80003A1C3 /* MoviesViewController.xib in Resources */,
 				F429E227216615C50003A1C3 /* Assets.xcassets in Resources */,
+				F429E23F21661CC50003A1C3 /* MovieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +168,7 @@
 			files = (
 				F429E220216615C40003A1C3 /* AppDelegate.swift in Sources */,
 				F429E23A216619C80003A1C3 /* MoviesViewController.swift in Sources */,
+				F429E23E21661CC50003A1C3 /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
