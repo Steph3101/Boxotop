@@ -18,6 +18,7 @@ class MoviesViewController: UIViewController {
         moviesTableView.dataSource      = self
         moviesTableView.delegate        = self
         moviesTableView.tableFooterView = UIView()
+        moviesTableView.register(UINib(nibName: "MovieTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "MovieTableViewCell")
     }
 }
 
@@ -32,7 +33,14 @@ extension MoviesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath)
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
     }
 }
 

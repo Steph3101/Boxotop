@@ -16,6 +16,8 @@
 		F429E23F21661CC50003A1C3 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F429E23D21661CC50003A1C3 /* MovieViewController.xib */; };
 		F429E24321663FB60003A1C3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E24221663FB60003A1C3 /* Movie.swift */; };
 		F429E245216640D20003A1C3 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E244216640D20003A1C3 /* Actor.swift */; };
+		F429E248216641970003A1C3 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E246216641970003A1C3 /* MovieTableViewCell.swift */; };
+		F429E249216641970003A1C3 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F429E247216641970003A1C3 /* MovieTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		F429E23D21661CC50003A1C3 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 		F429E24221663FB60003A1C3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F429E244216640D20003A1C3 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		F429E246216641970003A1C3 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		F429E247216641970003A1C3 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 		F429E24121663DE00003A1C3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F429E246216641970003A1C3 /* MovieTableViewCell.swift */,
+				F429E247216641970003A1C3 /* MovieTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F429E22A216615C50003A1C3 /* LaunchScreen.storyboard in Resources */,
+				F429E249216641970003A1C3 /* MovieTableViewCell.xib in Resources */,
 				F429E23B216619C80003A1C3 /* MoviesViewController.xib in Resources */,
 				F429E227216615C50003A1C3 /* Assets.xcassets in Resources */,
 				F429E23F21661CC50003A1C3 /* MovieViewController.xib in Resources */,
@@ -190,6 +197,7 @@
 			files = (
 				F429E220216615C40003A1C3 /* AppDelegate.swift in Sources */,
 				F429E23A216619C80003A1C3 /* MoviesViewController.swift in Sources */,
+				F429E248216641970003A1C3 /* MovieTableViewCell.swift in Sources */,
 				F429E24321663FB60003A1C3 /* Movie.swift in Sources */,
 				F429E23E21661CC50003A1C3 /* MovieViewController.swift in Sources */,
 				F429E245216640D20003A1C3 /* Actor.swift in Sources */,
