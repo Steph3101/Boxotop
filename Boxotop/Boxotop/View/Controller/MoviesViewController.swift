@@ -11,10 +11,13 @@ import UIKit
 class MoviesViewController: UIViewController {
 
     @IBOutlet weak var moviesTableView: UITableView!
+
+    var moviesViewModel: MoviesViewModel = MoviesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Box Office"
         moviesTableView.dataSource      = self
         moviesTableView.delegate        = self
         moviesTableView.tableFooterView = UIView()
@@ -25,16 +28,19 @@ class MoviesViewController: UIViewController {
 extension MoviesViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return moviesViewModel.sectionsCount()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return moviesViewModel.cellsCount()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell: MovieTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell else {
+            return UITableViewCell()
+        }
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath)
+        cell.prepare(withViewModel: moviesViewModel.movieViewModel(forIndexPath: indexPath))
 
         return cell
     }
@@ -47,7 +53,12 @@ extension MoviesViewController: UITableViewDataSource {
 extension MoviesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Movie selected")
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let movieViewModel = moviesViewModel.movieViewModel(forIndexPath: indexPath)
+        let movieViewController: MovieViewController = MovieViewController(movieViewModel: movieViewModel)
+
+        navigationController?.pushViewController(movieViewController, animated: true)
     }
 
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

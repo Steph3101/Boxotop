@@ -18,6 +18,8 @@
 		F429E245216640D20003A1C3 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E244216640D20003A1C3 /* Actor.swift */; };
 		F429E248216641970003A1C3 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E246216641970003A1C3 /* MovieTableViewCell.swift */; };
 		F429E249216641970003A1C3 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F429E247216641970003A1C3 /* MovieTableViewCell.xib */; };
+		F429E24B21664E190003A1C3 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E24A21664E190003A1C3 /* MoviesViewModel.swift */; };
+		F429E24D21666DB10003A1C3 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429E24C21666DB10003A1C3 /* MovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		F429E244216640D20003A1C3 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		F429E246216641970003A1C3 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		F429E247216641970003A1C3 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		F429E24A21664E190003A1C3 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		F429E24C21666DB10003A1C3 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 		F429E235216618A70003A1C3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F429E24A21664E190003A1C3 /* MoviesViewModel.swift */,
+				F429E24C21666DB10003A1C3 /* MovieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,7 +204,9 @@
 				F429E220216615C40003A1C3 /* AppDelegate.swift in Sources */,
 				F429E23A216619C80003A1C3 /* MoviesViewController.swift in Sources */,
 				F429E248216641970003A1C3 /* MovieTableViewCell.swift in Sources */,
+				F429E24D21666DB10003A1C3 /* MovieViewModel.swift in Sources */,
 				F429E24321663FB60003A1C3 /* Movie.swift in Sources */,
+				F429E24B21664E190003A1C3 /* MoviesViewModel.swift in Sources */,
 				F429E23E21661CC50003A1C3 /* MovieViewController.swift in Sources */,
 				F429E245216640D20003A1C3 /* Actor.swift in Sources */,
 			);

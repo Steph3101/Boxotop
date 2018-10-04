@@ -19,4 +19,9 @@ class MovieTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
+    func prepare(withViewModel movieViewModel: MovieViewModel) {
+
+        titleLabel.text = movieViewModel.movieTitle()
+    }
 }
