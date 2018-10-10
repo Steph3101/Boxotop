@@ -11,7 +11,17 @@ import UIKit
 class MovieViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var releaseDateLabel: UILabel!
+
+    @IBOutlet weak var myReviewContainerView: UIView!
+
+    @IBOutlet weak var synopsisContainerView: UIView!
+    @IBOutlet weak var synopsisLabel: UILabel!
+
+    @IBOutlet weak var castingCollectionView: UICollectionView!
+    @IBOutlet weak var similarMoviewCollectionView: UICollectionView!
+
     var movieViewModel: MovieViewModel
 
     init(movieViewModel: MovieViewModel) {
@@ -33,5 +43,6 @@ class MovieViewController: UIViewController {
     func prepareUI() {
 
         titleLabel.text = movieViewModel.movieTitle()
+        synopsisLabel.text = movieViewModel.movieSynopsis()
     }
 }

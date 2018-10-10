@@ -18,8 +18,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="345" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dja-ZI-YEF">
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" translatesAutoresizingMaskIntoConstraints="NO" id="Dja-ZI-YEF">
                         <rect key="frame" x="16" y="16" width="75" height="97.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="75" id="dB9-SU-Rvy"/>
                         </constraints>
@@ -130,4 +132,7 @@
             <point key="canvasLocation" x="106.40000000000001" y="203.29835082458771"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="film" width="32" height="31"/>
+    </resources>
 </document>

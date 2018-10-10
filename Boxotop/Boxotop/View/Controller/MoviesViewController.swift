@@ -23,6 +23,14 @@ class MoviesViewController: UIViewController {
         moviesTableView.tableFooterView = UIView()
         moviesTableView.register(UINib(nibName: "MovieTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "MovieTableViewCell")
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let selectedIndex = moviesTableView.indexPathForSelectedRow {
+            moviesTableView.deselectRow(at: selectedIndex, animated: true)
+        }
+    }
 }
 
 extension MoviesViewController: UITableViewDataSource {
@@ -53,15 +61,9 @@ extension MoviesViewController: UITableViewDataSource {
 extension MoviesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-
         let movieViewModel = moviesViewModel.movieViewModel(forIndexPath: indexPath)
         let movieViewController: MovieViewController = MovieViewController(movieViewModel: movieViewModel)
 
         navigationController?.pushViewController(movieViewController, animated: true)
-    }
-
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

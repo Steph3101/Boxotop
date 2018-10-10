@@ -11,17 +11,22 @@ import UIKit
 class MovieViewModel: NSObject {
 
     private var movie: Movie
+    private let emptyField = "-"
 
     init(movie: Movie) {
         self.movie = movie
     }
 
     func movieTitle() -> String {
-        return movie.title ?? ""
+        return movie.title ?? emptyField
     }
 
     func movieDirector() -> String {
-        return movie.director ?? ""
+        return movie.director ?? emptyField
+    }
+
+    func movieSynopsis() -> String {
+        return movie.synopsis ?? emptyField
     }
 
     func movieActors() -> String {
@@ -32,7 +37,7 @@ class MovieViewModel: NSObject {
             return actorFullName
         })
 
-        return actorsNames?.joined(separator: ", ") ?? ""
+        return actorsNames?.joined(separator: ", ") ?? emptyField
     }
 
     func movieReleaseDate() -> String {
@@ -41,7 +46,7 @@ class MovieViewModel: NSObject {
         dateFormatter.timeStyle = .none
 
         guard let date = movie.releaseDate else {
-            return ""
+            return emptyField
         }
 
         return dateFormatter.string(from: date)
