@@ -21,7 +21,11 @@ class MovieTableViewCell: UITableViewCell {
     }
 
     func prepare(withViewModel movieViewModel: MovieViewModel) {
+        titleLabel.text         = movieViewModel.movieTitle()
+        actorsLabel.text        = movieViewModel.movieActors()
+        directorLabel.text      = movieViewModel.movieDirector()
+        releaseDateLabel.text   = movieViewModel.movieReleaseDate()
 
-        titleLabel.text = movieViewModel.movieTitle()
+        // TODO: Download movie picture
     }
 }

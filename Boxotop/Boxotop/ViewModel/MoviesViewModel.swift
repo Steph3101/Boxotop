@@ -12,8 +12,11 @@ class MoviesViewModel: NSObject {
 
     private var moviesViewModels: [MovieViewModel]? {
 
+        // TODO: remove before release
         let movie1 = Movie()
         movie1.title = "Forest Gump"
+        movie1.releaseDate = Date()
+        movie1.director = "Some Body"
         let moviewVM1 = MovieViewModel(movie: movie1)
 
         let movie2 = Movie()

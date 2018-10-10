@@ -11,11 +11,12 @@ import UIKit
 class Movie: NSObject {
 
     var title: String?
+    var director: String?
     var releaseDate: Date?
     var criticsRate: Float?
     var audienceRate: Float?
     var synopsis: String?
-    var casting: Actor?
+    var actors: [Actor]?
     var similarMovies: [Movie]?
     var posterURL: URL?
 }
