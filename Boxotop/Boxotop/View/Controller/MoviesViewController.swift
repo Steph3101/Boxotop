@@ -13,6 +13,7 @@ class MoviesViewController: UIViewController {
     @IBOutlet weak var moviesTableView: UITableView!
 
     var moviesViewModel: MoviesViewModel = MoviesViewModel()
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,12 @@ class MoviesViewController: UIViewController {
         moviesTableView.delegate        = self
         moviesTableView.tableFooterView = UIView()
         moviesTableView.register(UINib(nibName: "MovieTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "MovieTableViewCell")
+
+        searchController.searchResultsUpdater                   = self
+        searchController.obscuresBackgroundDuringPresentation   = false
+        searchController.searchBar.placeholder                  = "Search movies"
+        navigationItem.searchController                         = searchController
+        definesPresentationContext                              = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +37,11 @@ class MoviesViewController: UIViewController {
         if let selectedIndex = moviesTableView.indexPathForSelectedRow {
             moviesTableView.deselectRow(at: selectedIndex, animated: true)
         }
+    }
+
+    func filterResultsForSearchText(_ searchText: String) {
+        moviesViewModel.filterMoviesWithSearchText(searchText)
+        moviesTableView.reloadData()
     }
 }
 
@@ -65,5 +77,12 @@ extension MoviesViewController: UITableViewDelegate {
         let movieViewController: MovieViewController = MovieViewController(movieViewModel: movieViewModel)
 
         navigationController?.pushViewController(movieViewController, animated: true)
+    }
+}
+
+extension MoviesViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        filterResultsForSearchText(searchController.searchBar.text ?? "")
     }
 }
